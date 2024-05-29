@@ -3,7 +3,7 @@ import { FaUser, FaChevronRight, FaTable } from "react-icons/fa6";
 import { fetchUserById, fetchProjects } from "../api";
 import { useEffect, useState } from "react";
 
-import logo from "../assets/images/logo_w_title.png";
+import logo from "../assets/images/logo.png";
 
 const Dashboard = ({ className, user, projects }) => {
   // const [user, setUser] = useState({
@@ -55,9 +55,17 @@ const Dashboard = ({ className, user, projects }) => {
   console.log(user);
   return (
     <main className={`${className} col-span-4 grid gap-4 p-4`}>
-      <div className="text-left text-xl font-bold">
-        <span className="text-blue-500">Dev</span>
-        <span className="text-black">Net</span>
+      <div className="flex items-center gap-2">
+        <img
+          src={logo}
+          alt="logo"
+          className=" aspect-square w-12 rounded-full p-1"
+        />
+        <div className="text-left text-xl font-bold">
+          <span className="text-blue-500">Dev</span>
+          <span className="text-black">Net</span>
+          <div className="text-sm text-slate-400">Web Companion</div>
+        </div>
       </div>
       <section className=" flex flex-col gap-4 rounded-lg bg-blue-600 p-4 text-slate-200">
         <header className=" flex items-center gap-4 border-b border-slate-200 pb-4">

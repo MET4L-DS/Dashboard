@@ -21,6 +21,8 @@ import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 import { fetchUserById, fetchProjects } from "../api";
 
+import logo from "../assets/images/logo.png";
+
 const SignIn = ({ user, setUser, setProjects }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -74,9 +76,17 @@ const SignIn = ({ user, setUser, setProjects }) => {
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <div className="flex w-2/3 max-w-4xl rounded-2xl bg-white shadow-2xl">
           <div className="w-3/5 p-5">
-            <div className="text-left font-bold">
-              <span className="text-blue-500">Dev</span>
-              <span className="text-black">Net</span>
+            <div className="flex items-center gap-2">
+              <img
+                src={logo}
+                alt="logo"
+                className=" aspect-square w-12 rounded-full p-1"
+              />
+              <div className="text-left text-xl font-bold">
+                <span className="text-blue-500">Dev</span>
+                <span className="text-black">Net</span>
+                <div className="text-sm text-slate-400">Web Companion</div>
+              </div>
             </div>
 
             <div className="py-10">

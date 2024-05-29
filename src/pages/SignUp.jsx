@@ -11,6 +11,8 @@ import { auth, db } from "../configs/firebase";
 import { setDoc, doc } from "firebase/firestore";
 // import { toast } from "react-toastify";
 
+import logo from "../assets/images/logo.png";
+
 const SignUp = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -57,9 +59,17 @@ const SignUp = () => {
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <div className="flex w-2/3 max-w-4xl rounded-2xl bg-white shadow-2xl">
           <div className="w-full p-5">
-            <div className="text-left font-bold">
-              <span className="text-blue-500">Dev</span>
-              <span className="text-black">Net</span>
+            <div className="flex items-center gap-2">
+              <img
+                src={logo}
+                alt="logo"
+                className=" aspect-square w-12 rounded-full p-1"
+              />
+              <div className="text-left text-xl font-bold">
+                <span className="text-blue-500">Dev</span>
+                <span className="text-black">Net</span>
+                <div className="text-sm text-slate-400">Web Companion</div>
+              </div>
             </div>
 
             <div className="py-10" onSubmit={handleSubmit}>
